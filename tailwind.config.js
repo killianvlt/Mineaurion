@@ -28,11 +28,17 @@ module.exports = {
         '8xl': '96rem',
         '9xl': '128rem',
       },
+      height: {
+        '128': '32rem',
+      },
       borderRadius: {
         '4xl': '2rem',
       },
       rotate: {
         '360': '360deg',
+      },
+      backgroundImage: {
+        'hero-pattern': "url('~assets/img/background.svg')",
       }
     }
   },
