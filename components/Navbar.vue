@@ -12,7 +12,7 @@
       </div>
       <ul class="flex flex-row gap-10 items-center">
         <li><a class="text-xl text-gray-light brightness-75 hover:brightness-100 duration-300" href="">NOS SERVEURS</a></li>
-        <li><a class="text-xl text-gray-light brightness-75 hover:brightness-100 duration-300" href="">STATUTS</a></li>
+        <li><NuxtLink class="text-xl text-gray-light brightness-75 hover:brightness-100 duration-300" to="/servers">STATUS</NuxtLink></li>
         <li><a class="text-xl text-gray-light brightness-75 hover:brightness-100 duration-300" href="">RECOMPENSES</a></li>
       </ul>
     </div>

@@ -16,11 +16,11 @@ module.exports = {
       'green': '#13ce66',
       'yellow': '#ffc82c',
       'gray-dark': '#273444',
-      'gray': '#8492a6',
+      'gray': '#A4ABBF',
       'gray-light': '#F6EFEF',
     },
     fontFamily: {
-      sans: ['Roboto', 'sans-serif'],
+      sans: ['Roboto'],
       serif: ['Merriweather', 'serif'],
     },
     extend: {
@@ -31,6 +31,9 @@ module.exports = {
       height: {
         '128': '32rem',
       },
+      width: {
+        '128': '32rem',
+      },
       borderRadius: {
         '4xl': '2rem',
       },
@@ -39,6 +42,7 @@ module.exports = {
       },
       backgroundImage: {
         'hero-pattern': "url('~assets/img/background.svg')",
+        'servers-pattern' : "url('~assets/img/servers-list.jpg')"
       }
     }
   },
