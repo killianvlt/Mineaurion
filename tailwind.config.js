@@ -43,6 +43,9 @@ module.exports = {
       backgroundImage: {
         'hero-pattern': "url('~assets/img/background.svg')",
         'servers-pattern' : "url('~assets/img/servers-list.jpg')"
+      },
+      backgroundSize: {
+        'full': '100% 100%'
       }
     }
   },
