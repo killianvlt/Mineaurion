@@ -15,6 +15,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/css/main.css',
@@ -44,5 +45,6 @@ export default {
         autoprefixer: {},
       },
     },
-  }
+  },
+  target: 'static'
 }

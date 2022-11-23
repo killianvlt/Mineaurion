@@ -1,6 +1,6 @@
 <template>
   <section class="h-14 bg-dark-blue">
-    <div class="container mx-auto flex justify-between align-middle py-4">
+    <div class="container md:mx-auto flex justify-between align-middle py-4">
       <ul class="flex">
         <li class="text-gray-light font-sans">Joueur(s) en ligne : {{infos.onlinePlayers}}</li>
         <li class="text-gray-light ml-6 font-sans">joueurs uniques : 12 250</li>
@@ -25,7 +25,7 @@ export default {
     }
   },
   async fetch() {
-    infos = await this.infosArray()
+    const infos = await this.infosArray()
   },
   mounted() {
     this.intervalData = setInterval(this.infosArray, 12000)

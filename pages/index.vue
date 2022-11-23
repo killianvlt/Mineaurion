@@ -6,7 +6,7 @@
           <h1 class="text-gray-light text-6xl font-sans font-medium uppercase">Mineaurion</h1>
           <p class="text-gray-light text-2xl w-max">Une expérience unique, des modpacks, une communauté.</p>
           <p class="text-gray-light text-2xl w-max">Viens nous rejoindre !</p>
-          <button class="w-96 uppercase h-16 bg-blue text-gray-light brightness-75 rounded-lg mt-2 hover:brightness-100 duration-200">jouer maintenant</button>
+          <button @click="scrollToLauncher" class="w-96 uppercase h-16 bg-blue text-gray-light brightness-75 rounded-lg mt-2 hover:brightness-100 duration-200">jouer maintenant</button>
         </div>
         <div>
           <img class="h-128 w-full aspect-auto border-b-orange" src="~/assets/img/llama.png" alt="" srcset="">
@@ -42,7 +42,7 @@
         <p class="text-xl w-4/5 pl-14 font-light">Les membres du staff sont présents pour vous, sur les serveurs, sur le forum mais aussi sur le discord.</p>        
       </div>
     </section>
-    <section class="h-128 bg-gray-dark mt-5 flex flex-col justify-center font-sans items-center">
+    <section ref="launcher" class="h-128 bg-gray-dark mt-5 flex flex-col justify-center font-sans items-center">
       <div class="container mx-auto text-gray-light">
         <div class="flex justify-center items-center flex-col">
           <h2 class="text-4xl font-light">Télécharger notre propre launcher</h2>
@@ -62,12 +62,11 @@
         </div>
       </div>
     </section>
-    <section class="mt-14 mb-24 flex flex-col items-center justify-center">
+    <section ref="servers" class="mt-14 mb-24 flex flex-col items-center justify-center">
       <h2 class="text-5xl font-light uppercase">Nos serveurs</h2>
       <div class="grid grid-cols-4 items-center justify-center grid-rows-2  gap-6 mt-20">
         <div class="">
           <img class="rounded-xl hover:scale-110 duration-200 hover:cursor-pointer brightness-75 hover:brightness-100" src="~assets/img/server.jpg" alt="">
-          <div class="h-96 w-test bg-blue"></div>
         </div>
         <div><img class="rounded-xl hover:scale-110 duration-200 hover:cursor-pointer brightness-75 hover:brightness-100" src="~assets/img/server.jpg" alt=""></div>
         <div><img class="rounded-xl hover:scale-110 duration-200 hover:cursor-pointer brightness-75 hover:brightness-100" src="~assets/img/server.jpg" alt=""></div>
@@ -83,13 +82,15 @@
 
 <script>
 export default {
-  data: {
-  },
   methods: {
-    select: function(){
-      divID = this.id // ??
-      alert(divID)
+    scrollToLauncher(){
+      this.$refs["launcher"].scrollIntoView({behavior: 'smooth'})
     }
-  }
+  },
+  head(){
+    return {
+      title: 'Mineaurion - Accueil'
+    }
+  },
 }
 </script>

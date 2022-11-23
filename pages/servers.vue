@@ -47,12 +47,17 @@ export default {
       servers: []
     }
   },
+  head(){
+    return {
+      title: 'Mineaurion - Liste des serveurs'
+    }
+  },
   async fetch() {
-    servers = await this.serversArray();
+    const servers = await this.serversArray();
     mode: 'no-cors'
   },
   mounted() {
-    this.intervalData = setInterval(this.serversArray, 12000)
+    this.intervalData = setTimeout(this.serversArray, 12000)
   },
   destroyed() {
     clearInterval(this.intervalData)

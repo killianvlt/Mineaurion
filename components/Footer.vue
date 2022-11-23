@@ -2,7 +2,7 @@
   <footer class="">
     <div class="w-full h-16 bg-dark-blue">
       <div class="container mx-auto flex justify-end">
-        <div class="h-16 w-16 right-0 bg-blue brightness-75 hover:brightness-100 hover:cursor-pointer duration-100">
+        <div @click="scrollToTop" class="h-16 w-16 right-0 bg-blue brightness-75 hover:brightness-100 hover:cursor-pointer duration-100">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 ">
             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
           </svg>
@@ -51,3 +51,16 @@
     </div>
   </footer>
 </template>
+
+<script>
+export default {
+  methods: {
+    scrollToTop() {
+      window.scroll({
+        top: 0,
+        behavior: 'smooth'
+      })
+    }
+  }
+}
+</script>
