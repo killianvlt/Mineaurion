@@ -13,7 +13,8 @@ module.exports = {
       'marine-blue': '#4F476D',
       'blue': '#4B9AD7',
       'orange': '#ff7849',
-      'green': '#13ce66',
+      'green': 'green',
+      'red': 'red',
       'yellow': '#ffc82c',
       'gray-dark': '#273444',
       'gray': '#A4ABBF',
@@ -33,6 +34,7 @@ module.exports = {
       },
       width: {
         '128': '32rem',
+        'test': '62vw'
       },
       borderRadius: {
         '4xl': '2rem',
@@ -46,6 +48,9 @@ module.exports = {
       },
       backgroundSize: {
         'full': '100% 100%'
+      },
+      fontSize: {
+        'badge': '1rem'
       }
     }
   },

@@ -51,21 +51,24 @@
           <p class="text-2xl w-2/4 font-thin">Alors n'hésitez pas, téléchargez le !</p>
         </div>
         <div class="flex flex-row mt-5 items-center justify-center">
-          <button class="flex text-gray-light relative items-center justify-center h-16 bg-blue w-3/12 ml-4 text-xl uppercase rounded-md brightness-75 hover:brightness-100 duration-100">
+          <button class="flex text-gray-light relative items-center justify-center h-16 bg-blue w-3/12 ml-4 text-xl font-light rounded-md brightness-75 hover:brightness-100 duration-100">
             <img class="absolute left-8" src="~/assets/img/Windows.svg" alt="">
-            launcher Windows
+            Windows
           </button>
-          <button class="flex text-gray-light relative items-center justify-center h-16 bg-blue w-3/12 ml-4 text-xl uppercase rounded-md brightness-75 hover:brightness-100 duration-100">
+          <button class="flex text-gray-light relative items-center justify-center h-16 bg-blue w-3/12 ml-4 text-xl font-light rounded-md brightness-75 hover:brightness-100 duration-100">
             <img class="absolute left-10" src="~/assets/img/Linux.svg" alt="">
-            launcher linux
+            Linux
           </button>
         </div>
       </div>
     </section>
-    <section class="mt-14 flex flex-col justify-center font-sans items-center">
+    <section class="mt-14 mb-24 flex flex-col items-center justify-center">
       <h2 class="text-5xl font-light uppercase">Nos serveurs</h2>
-      <div class="grid grid-flow-col grid-rows-2  gap-6 mt-20">
-        <div><img class="rounded-xl hover:scale-110 duration-200 hover:cursor-pointer brightness-75 hover:brightness-100" src="~assets/img/server.jpg" alt=""></div>
+      <div class="grid grid-cols-4 items-center justify-center grid-rows-2  gap-6 mt-20">
+        <div class="">
+          <img class="rounded-xl hover:scale-110 duration-200 hover:cursor-pointer brightness-75 hover:brightness-100" src="~assets/img/server.jpg" alt="">
+          <div class="h-96 w-test bg-blue"></div>
+        </div>
         <div><img class="rounded-xl hover:scale-110 duration-200 hover:cursor-pointer brightness-75 hover:brightness-100" src="~assets/img/server.jpg" alt=""></div>
         <div><img class="rounded-xl hover:scale-110 duration-200 hover:cursor-pointer brightness-75 hover:brightness-100" src="~assets/img/server.jpg" alt=""></div>
         <div><img class="rounded-xl hover:scale-110 duration-200 hover:cursor-pointer brightness-75 hover:brightness-100" src="~assets/img/server.jpg" alt=""></div>
@@ -80,6 +83,13 @@
 
 <script>
 export default {
-  name: 'Home'
+  data: {
+  },
+  methods: {
+    select: function(){
+      divID = this.id // ??
+      alert(divID)
+    }
+  }
 }
 </script>
