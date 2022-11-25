@@ -1,9 +1,9 @@
 <template>
-  <section class="h-14 bg-dark-blue">
-    <div class="container md:mx-auto flex justify-between align-middle py-4">
-      <ul class="flex">
+  <section class="md:h-14 bg-dark-blue">
+    <div class="container md:mx-auto flex md:flex-row flex-col justify-center md:justify-between items-center py-4">
+      <ul class="flex flex-col md:flex-row">
         <li class="text-gray-light font-sans">Joueur(s) en ligne : {{infos.onlinePlayers}}</li>
-        <li class="text-gray-light ml-6 font-sans">joueurs uniques : 12 250</li>
+        <li class="text-gray-light md:ml-6 font-sans">joueurs uniques : 12 250</li>
       </ul>
       <div class="flex">
         <span class="text-gray-light font-sans">Rejoins nous:</span>

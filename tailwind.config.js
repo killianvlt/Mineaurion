@@ -52,8 +52,8 @@ module.exports = {
       fontSize: {
         'badge': '1rem'
       }
-    }
-  },
+    },
+  }
 }
 
 
