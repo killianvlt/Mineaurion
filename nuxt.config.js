@@ -16,7 +16,6 @@ export default {
     ]
   },
   target: 'static',
-  ssr: 'false',
   router: {
     base: '/Mineaurion'
   },
