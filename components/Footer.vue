@@ -9,8 +9,8 @@
         </div>
       </div>
     </div>
-    <div class="h-52 bg-blue w-full">
-      <div class="container mx-auto grid grid-flow-col items-center">
+    <div class="lg:h-52 bg-blue w-full">
+      <div class="container mx-auto grid lg:grid-flow-col items-center justify-center lg:justify-around">
         <ul class="flex flex-col">
           <h3>Title</h3>
           <li>test</li>

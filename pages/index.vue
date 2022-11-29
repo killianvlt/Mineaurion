@@ -45,52 +45,39 @@
       </div>
     </section>
     <section ref="launcher" class="h-128 bg-gray-dark mt-5 flex flex-col justify-center font-sans items-center">
-      <div class="container mx-auto text-gray-light">
+      <div class="container mx-auto text-gray-light ">
         <div class="flex justify-center items-center flex-col">
-          <h2 class="text-4xl font-light">Télécharger notre propre launcher</h2>
-          <p class="text-2xl w-2/4 mt-5 font-thin">Nous avons développé notre launcher pour vous !</p>
-          <p class="text-2xl w-2/4 font-thin">Il permet de vous connecter avec plus de facilités, d'avoir accès à certains contenus exclusifs.</p>
-          <p class="text-2xl w-2/4 font-thin">Alors n'hésitez pas, téléchargez le !</p>
+          <h2 class="text-2xl text-center lg:text-4xl font-light">Télécharger notre propre launcher</h2>
+          <p class="text-xl text-center lg:text-2xl w-full lg:w-3/4 mt-5 font-thin">Nous avons développé notre launcher pour vous !</p>
+          <p class="text-xl text-center lg:text-2xl w-full lg:w-3/4 font-thin">Il permet de vous connecter avec plus de facilités, d'avoir accès à certains contenus exclusifs.</p>
+          <p class="text-xl text-center lg:text-2xl w-full lg:w-3/4 font-thin">Alors n'hésitez pas, téléchargez le !</p>
         </div>
-        <div class="flex flex-row mt-5 items-center justify-center">
-          <button class="flex text-gray-light relative items-center justify-center h-16 bg-blue w-3/12 ml-4 text-xl font-light rounded-md brightness-75 hover:brightness-100 duration-100">
+        <div class="flex flex-col lg:flex-row mt-5 items-center justify-center">
+          <button class="flex text-gray-light relative items-center justify-center h-16 bg-blue w-72 lg:w-3/12 ml-4 text-xl font-light rounded-md brightness-75 hover:brightness-100 duration-100">
             <img class="absolute left-8" src="~/assets/img/Windows.svg" alt="">
             Windows
           </button>
-          <button class="flex text-gray-light relative items-center justify-center h-16 bg-blue w-3/12 ml-4 text-xl font-light rounded-md brightness-75 hover:brightness-100 duration-100">
+          <button class="flex text-gray-light relative items-center justify-center h-16 bg-blue w-72 mt-5 lg:mt-0 lg:w-3/12 ml-4 text-xl font-light rounded-md brightness-75 hover:brightness-100 duration-100">
             <img class="absolute left-10" src="~/assets/img/Linux.svg" alt="">
             Linux
           </button>
         </div>
       </div>
     </section>
-    <section ref="servers" class="mt-14 mb-24 flex flex-col items-center justify-center">
-      <h2 class="text-5xl font-light uppercase">Nos serveurs</h2>
-      <div class="grid grid-cols-4 items-center justify-center grid-rows-2  gap-6 mt-20">
-        <div class="">
-          <img class="rounded-xl hover:scale-110 duration-200 hover:cursor-pointer brightness-75 hover:brightness-100" src="~assets/img/server.jpg" alt="">
-        </div>
-        <div><img class="rounded-xl hover:scale-110 duration-200 hover:cursor-pointer brightness-75 hover:brightness-100" src="~assets/img/server.jpg" alt=""></div>
-        <div><img class="rounded-xl hover:scale-110 duration-200 hover:cursor-pointer brightness-75 hover:brightness-100" src="~assets/img/server.jpg" alt=""></div>
-        <div><img class="rounded-xl hover:scale-110 duration-200 hover:cursor-pointer brightness-75 hover:brightness-100" src="~assets/img/server.jpg" alt=""></div>
-        <div><img class="rounded-xl hover:scale-110 duration-200 hover:cursor-pointer brightness-75 hover:brightness-100" src="~assets/img/server.jpg" alt=""></div>
-        <div><img class="rounded-xl hover:scale-110 duration-200 hover:cursor-pointer brightness-75 hover:brightness-100" src="~assets/img/server.jpg" alt=""></div>
-        <div><img class="rounded-xl hover:scale-110 duration-200 hover:cursor-pointer brightness-75 hover:brightness-100" src="~assets/img/server.jpg" alt=""></div>
-        <div><img class="rounded-xl hover:scale-110 duration-200 hover:cursor-pointer brightness-75 hover:brightness-100" src="~assets/img/server.jpg" alt=""></div>
-      </div>
-    </section>
+    <TabList ref="servers-list"></TabList>
   </main>
 </template>
-
 <script>
+import TabList from '../components/TabList.vue'
 export default {
+  components: {
+    TabList
+  },
+  name: 'index',
   methods: {
     scrollToLauncher(){
       this.$refs["launcher"].scrollIntoView({behavior: 'smooth'})
     },
-    scrollToServers(){
-      this.$refs["servers"].scrollIntoView({behavior: 'smooth'})
-    }
   },
   head(){
     return {

@@ -1,9 +1,9 @@
 <template>
   <main class="bg-servers-pattern min-h-screen bg-full">
     <h1 class="flex justify-center text-5xl text-gray-light pt-8">NOS SERVEURS</h1>
-    <div class="container mx-auto grid grid-cols-3 grid-rows-4 gap-6 mt-8">
+    <div class="container mx-auto grid lg:grid-cols-3 grid-rows-4 gap-6 mt-8">
 
-      <div v-for="(server, index) in servers" v-bind:key="index" class="h-auto w-96 border-4 solid border-blue rounded-lg">
+      <div v-for="(server, index) in servers" v-bind:key="index" class="h-auto w-4/5 mb-5  mx-auto lg:mb-0 lg:w-96 border-4 solid border-blue rounded-lg">
         <div class="h-14 flex items-center pl-4 bg-dark-blue w-full">
           <h1 class="font-sans font-semibold text-xl uppercase text-gray-light">{{ server.name }}</h1>
           <div class="flex pl-4">

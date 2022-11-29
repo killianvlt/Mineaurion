@@ -19,10 +19,18 @@ module.exports = {
       'gray-dark': '#273444',
       'gray': '#A4ABBF',
       'gray-light': '#F6EFEF',
+      'ip': '#A4ABBF'
     },
     fontFamily: {
       sans: ['Roboto'],
       serif: ['Merriweather', 'serif'],
+    },
+    deliciousHamburgers: {
+      size: '30px', // must be in px.
+      color: '#586061',
+      colorLight: '#fff8f4',
+      padding: '0px', // must be in px.
+      animationSpeed: 1,
     },
     extend: {
       spacing: {
@@ -35,6 +43,9 @@ module.exports = {
       width: {
         '128': '32rem',
         'test': '62vw'
+      },
+      margin: {
+        'arrow': '82px'
       },
       borderRadius: {
         '4xl': '2rem',
@@ -53,6 +64,10 @@ module.exports = {
         'badge': '1rem'
       }
     },
+    variants: {},
+    plugins: [
+      require("tailwindcss-animate"),
+    ],
   }
 }
 

@@ -3,7 +3,6 @@
     <Topbar />
     <Navbar />
     <Nuxt />
-
     <Footer/>
   </div>
 </template>

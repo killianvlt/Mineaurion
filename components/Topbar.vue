@@ -1,9 +1,10 @@
 <template>
   <section class="md:h-14 bg-dark-blue">
+    <Transition name="fade" mode="out-in">
     <div class="container md:mx-auto flex md:flex-row flex-col justify-center md:justify-between items-center py-4">
       <ul class="flex flex-col md:flex-row">
-        <li class="text-gray-light font-sans">Joueur(s) en ligne : {{infos.onlinePlayers}}</li>
-        <li class="text-gray-light md:ml-6 font-sans">joueurs uniques : 12 250</li>
+        <li v-if="infos.onlinePlayers <= 1" class="text-gray-light font-sans">{{infos.onlinePlayers}} joueur est en ligne</li>
+        <li v-else class="text-gray-light font-sans">{{infos.onlinePlayers}} joueur(s) sont en ligne</li>
       </ul>
       <div class="flex">
         <span class="text-gray-light font-sans">Rejoins nous:</span>
@@ -13,6 +14,7 @@
         </ul>
       </div>
     </div>
+  </Transition>
   </section>
 </template>
 
