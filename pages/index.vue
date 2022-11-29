@@ -64,7 +64,7 @@
         </div>
       </div>
     </section>
-    <TabList ref="servers-list"></TabList>
+    <TabList ref=""></TabList>
   </main>
 </template>
 <script>

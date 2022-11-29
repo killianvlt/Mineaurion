@@ -15,7 +15,11 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  
+  target: 'static',
+  ssr: 'false',
+  router: {
+    base: '/Mineaurion/'
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/css/main.css',
@@ -46,5 +50,4 @@ export default {
       },
     },
   },
-  target: 'static'
 }
